@@ -3,12 +3,15 @@ import fs from 'fs';
 import cors from 'cors';
 import crypto from 'crypto';
 import path from 'path';
+import { fileURLToPath } from 'url';
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(cors());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "top.html"));
 });
