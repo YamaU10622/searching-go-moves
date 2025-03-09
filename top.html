@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>手順検索サイト</title>
+  <style>
+  body { text-align: center; }
+  div { margin: 20px auto; color: #888; }
+  </style>
+  <link rel="stylesheet" href="top.css">
+</head>
+<body>
+
+<div id = "input-area">
+  <div>
+    <div id="black-captures">0</div>
+    <div id="white-captures">0</div>
+  </div>
+  <div id="input-board"></div>
+  <button id = "show-sgf-btn">入力の読み込み</button>
+</div>
+<div id = "output-area">
+  <div id = "searching-results">
+    検索結果
+  </div>
+</div>
+
+<script type="text/javascript" src="dist/jgoboard-latest.js"></script>
+<script type="text/javascript" src="large/board.js"></script>
+<script type="text/javascript" src="top.js"></script>
+
+</body>
+</html>

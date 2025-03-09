@@ -1,0 +1,50 @@
+{
+  "name": "jgoboard",
+  "version": "3.4.2",
+  "description": "jGoBoard javascript go board library",
+  "main": "src/jgoinit.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokkebk/jgoboard.git"
+  },
+  "keywords": [
+    "go",
+    "baduk",
+    "go",
+    "board",
+    "goban",
+    "weiqi",
+    "javascript"
+  ],
+  "author": "Joonas Pihlajamaa",
+  "homepage": "http://jgoboard.com",
+  "license": "CC-BY-NC-4.0",
+  "devDependencies": {
+    "browserify": "latest",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.5.0",
+    "grunt-cli": "^1.5.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-jsdoc": "~0.5.1",
+    "grunt-shell": "^1.1.1",
+    "jsdoc": "^3.4.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "superagent": "^3.7.0"
+  },
+  "type": "module"
+}

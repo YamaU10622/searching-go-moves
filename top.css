@@ -1,0 +1,26 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  transform: scale(0.67);
+  transform-origin: top;
+}
+
+#input-area{
+  flex: 1;
+  height: 100%;
+  /* transform: scale(0.67); */
+}
+
+#output-area{
+  flex: 3;
+  height:100%;
+  /* transform: scale(0.67); */
+}
+
+#searching-results{
+  justify-content: start;
+}
