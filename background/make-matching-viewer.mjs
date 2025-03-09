@@ -8,6 +8,10 @@ const port = 3000;
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "top.html"));
+});
+
 app.post('/send-input-sgf', (req, res) => {
   const targetsgf = req.body.targetsgf;
   const sourcejson = fs.readFileSync("./background/data/test_sgf.json", 'utf-8');
@@ -61,5 +65,5 @@ function generateId(data) {
 }
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at https://searching-go-moves.onrender.com:${port}`);
 });

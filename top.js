@@ -14,7 +14,7 @@ document.getElementById('show-sgf-btn').addEventListener('click', async () => {
   const data = {targetsgf : targetsgf};
   
   try {
-    const response = await fetch('http://localhost:3000/send-input-sgf', {
+    const response = await fetch('https://searching-go-moves.onrender.com/send-input-sgf', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
