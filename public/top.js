@@ -5,9 +5,9 @@ var updateCaptures = function (node) {
 var jrecord = new JGO.Record(19);
 var jboard = jrecord.jboard;
 var jsetup = new JGO.Setup(jboard, JGO.BOARD.largeWalnut);
-var player = JGO.BLACK; // next player
-var ko = false, lastMove = false; // ko coordinate and last move coordinate
-var lastHover = false, lastX = -1, lastY = -1; // hover helper vars
+var player = JGO.BLACK; 
+var ko = false, lastMove = false; 
+var lastHover = false, lastX = -1, lastY = -1; 
 
 document.getElementById('show-sgf-btn').addEventListener('click', async () => {
   const targetsgf = exportToSGF(jrecord);
@@ -24,7 +24,7 @@ document.getElementById('show-sgf-btn').addEventListener('click', async () => {
     const responseData = await response.json();
     if (responseData.isFound) {
       var viewerlink = document.createElement('a');
-      viewerlink.href = "../viewer.html?id=" + responseData.id;
+      viewerlink.href = "../public/viewer.html?id=" + responseData.id;
       viewerlink.target = "_blank";
       viewerlink.textContent = "棋譜のviewerを表示";
       document.getElementById("searching-results").appendChild(viewerlink);
