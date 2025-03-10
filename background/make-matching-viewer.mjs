@@ -26,6 +26,8 @@ app.use(helmet(
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, '../public')));
+app.use('/dist', express.static(path.join(__dirname, '../dist')));
+app.use('/large', express.static(path.join(__dirname, '../large')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'top.html'));
 });
