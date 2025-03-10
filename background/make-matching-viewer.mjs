@@ -26,7 +26,7 @@ app.use(helmet(
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'top.html'));
+    res.sendFile(path.join(__dirname, '../public', 'top.html'));
 });
 
 app.post('/send-input-sgf', (req, res) => {
