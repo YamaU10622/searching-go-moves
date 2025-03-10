@@ -3,12 +3,25 @@ import fs from 'fs';
 import cors from 'cors';
 import crypto from 'crypto';
 import path from 'path';
+import helmet from 'helmet';
 import { fileURLToPath } from 'url';
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use(helmet(
+  {
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "https://searching-go-moves.onrender.com"],
+        styleSrc: ["'self'", "'https://searching-go-moves.onrender.com'"],
+        imgSrc: ["'self'", "data:"],
+      }
+    },
+  }
+));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
