@@ -24,7 +24,7 @@ document.getElementById('show-sgf-btn').addEventListener('click', async () => {
     const responseData = await response.json();
     if (responseData.isFound) {
       var viewerlink = document.createElement('a');
-      viewerlink.href = "../public/viewer.html?id=" + responseData.id;
+      viewerlink.href = "/viewer.html?id=" + responseData.id;
       viewerlink.target = "_blank";
       viewerlink.textContent = "棋譜のviewerを表示";
       document.getElementById("searching-results").appendChild(viewerlink);
