@@ -44,6 +44,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
+    "helmet": "^8.0.0",
     "superagent": "^3.7.0"
   },
   "type": "module"
