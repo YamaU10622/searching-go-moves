@@ -15,8 +15,8 @@ app.use(helmet(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "https://searching-go-moves.onrender.com"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'", "https://searching-go-moves.onrender.com","https://ajax.googleapis.com"],
+        styleSrc: ["'self'", "'unsafe-inline'","https://maxcdn.bootstrapcdn.com"],
         imgSrc: ["'self'", "https://searching-go-moves.onrender.com"],
       }
     },
