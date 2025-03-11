@@ -34,7 +34,8 @@ app.get('/', (req, res) => {
 
 app.post('/send-input-sgf', (req, res) => {
   const targetsgf = req.body.targetsgf;
-  const sourcejson = fs.readFileSync("../background/data/test_sgf.json", 'utf-8');
+  const filePath = path.join(__dirname,'/data/test_sgf.json');
+  const sourcejson = fs.readFileSync(filePath, 'utf-8');
   const sourcedata = JSON.parse(sourcejson);
   var sourcesgf = sourcedata[0].sgf;
   var isFound = searchMatchingSgf(sourcesgf,targetsgf);
@@ -42,7 +43,8 @@ app.post('/send-input-sgf', (req, res) => {
   if(isFound){
     const id = generateId(sourcesgf);
     var matching_sgf_data = {"isFound": true,"id": id, "matching-sgf": sourcesgf};
-    fs.writeFileSync("../background/data/matching_sgf.json", JSON.stringify(matching_sgf_data)); 
+    const filePath = path.join(__dirname,'/data/matching_sgf.json');
+    fs.writeFileSync(filePath, JSON.stringify(matching_sgf_data)); 
     var response = matching_sgf_data;
     res.json(response);
   } else {
@@ -52,7 +54,8 @@ app.post('/send-input-sgf', (req, res) => {
 
 app.get('/get-matching-sgf', (req,res) => {
   const id = req.query.id;
-  const matching_sgf_json = fs.readFileSync("../background/data/matching_sgf.json", 'utf-8');
+  const filePath = path.join(__dirname,'/data/matching_sgf.json');
+  const matching_sgf_json = fs.readFileSync(filePath, 'utf-8');
   const matching_sgf_data = JSON.parse(matching_sgf_json);
   const matching_sgf = matching_sgf_data["matching-sgf"];
   res.json(matching_sgf);
