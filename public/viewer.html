@@ -16,13 +16,13 @@
     <div id="board"></div>
 
     <p class="controls" style="width: 500px;">
-    <a href="#" onclick="move(0); return false;"><i class="fa fa-fast-backward"></i></a>
-    <a href="#" onclick="move(-10); return false;"><i class="fa fa-backward"></i></a>
-    <a href="#" onclick="move(-1); return false;"><i class="fa fa-step-backward"></i></a>
+    <a href="#" id="first"><i class="fa fa-fast-backward"></i></a>
+    <a href="#" id="back10"><i class="fa fa-backward"></i></a>
+    <a href="#" id="back1"><i class="fa fa-step-backward"></i></a>
     <strong id="move">1</strong> / <strong id="moves">1</strong>
-    <a href="#" onclick="move(1); return false;"><i class="fa fa-step-forward"></i></a>
-    <a href="#" onclick="move(10); return false;"><i class="fa fa-forward"></i></a>
-    <a href="#" onclick="move(1000); return false;"><i class="fa fa-fast-forward"></i></a>
+    <a href="#" id="forward1"><i class="fa fa-step-forward"></i></a>
+    <a href="#" id="forward10"><i class="fa fa-forward"></i></a>
+    <a href="#" id="forward1000"><i class="fa fa-fast-forward"></i></a>
     Variation: <strong id="variation">1</strong> / <strong id="variations">1</strong>
     <a href="#" onclick="nextVariation(); return false;"><i title="variation" class="fa fa-arrows-v"></i></a>
     </p>
@@ -44,7 +44,7 @@
 <script type="text/javascript" src="/dist/jgoboard-latest.js"></script>
 <script type="text/javascript" src="/medium/board.js"></script>
 <script type="text/javascript" src="/large/board.js"></script>
-<script type="text/javascript" src="/viewer.js"></script>
+<script type="text/javascript" src="/viewer.mjs"></script>
 </div>
 </body>
 </html>
