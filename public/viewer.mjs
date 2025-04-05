@@ -20,6 +20,28 @@ app.use(helmet(
   }
 ));
 
+document.addEventListener('DOMContentLoaded', function () {
+  const actions = [
+    { id: 'first', handler: () => move(0) },
+    { id: 'back10', handler: () => move(-10) },
+    { id: 'back1', handler: () => move(-1) },
+    { id: 'forward1', handler: () => move(1) },
+    { id: 'forward10', handler: () => move(10) },
+    { id: 'forward1000', handler: () => move(1000) },
+    { id: 'nextVariation', handler: () => nextVariation() },
+  ];
+
+  actions.forEach(({ id, handler }) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        handler();
+      });
+    }
+  });
+});
+
 function move(dir) { // dir=0 has special meaning "beginning"
   if(!jrecord) return; // disable movement until SGF loaded
 
