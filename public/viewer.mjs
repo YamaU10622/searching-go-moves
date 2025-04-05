@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import JGO from '../large/board.js';
-import JGO from '../medium/board.js';
 
 var moveNum = 0, moves = 0, gotoMove = 0;
 var jrecord = false, jnotifier;
