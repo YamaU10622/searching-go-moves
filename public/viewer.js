@@ -1,24 +1,5 @@
-import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
-
 var moveNum = 0, moves = 0, gotoMove = 0;
 var jrecord = false, jnotifier;
-
-app.use(express.json());
-app.use(cors());
-app.use(helmet(
-  {
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "https://searching-go-moves.onrender.com","https://ajax.googleapis.com"],
-        styleSrc: ["'self'", "'unsafe-inline'","https://maxcdn.bootstrapcdn.com"],
-        imgSrc: ["'self'", "https://searching-go-moves.onrender.com"],
-      }
-    },
-  }
-));
 
 document.addEventListener('DOMContentLoaded', function () {
   const actions = [
